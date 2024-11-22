@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body{
+            background-color: lavender;
+        }
+        img{
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        }
+        button{
+            padding: 5px;
+            font-size: 20px;
+           border-radius: 5px;
+           margin-left: 180px;
+           margin-bottom: 20px;
+           background-color: rgb(114, 119, 119);
+        }
+        div{
+            border:2px solid rgb(207, 48, 48);
+            border-radius: 20px;
+            width:500px;
+            margin: 130px auto 0px auto; 
+            background-color: rgb(162, 166, 170);   
+        }
+    </style>
+</head>
+<body>
+<div>
+<img src="./images/dice.jpg" id="dice">
+<br><br>
+<button onclick="rollDice()">Roll The Dice</button>
+</div>
+<script>
+    const diceImg=document.getElementById("dice");
+    function rollDice(){
+        const min=1;
+        const max=7;
+        const Num=Math.floor(Math.random()*(max-min))+min;
+        switch(Num){
+            case 1:diceImg.src="./images/one.jpg";
+                   break;
+            case 2:diceImg.src="./images/two.png";
+                   break;   
+            case 3:diceImg.src="./images/three.jpg";
+                   break; 
+            case 4:diceImg.src="./images/four.png";
+                   break;
+            case 5:diceImg.src="./images/five.jpg";
+                   break;
+            case 6:diceImg.src="./images/six.jpg";
+        }
+    }
+</script>
+</body>
+</html>
